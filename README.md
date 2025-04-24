@@ -59,7 +59,7 @@ pip install huggingface==0.0.1 scikit-learn obonet accelerate==1.0.1 datasets==3
 ```bibtex
 @inproceedings{miao2025gobert,
   title={GoBERT: Gene Ontology Graph Informed BERT for Universal Gene Function Prediction},
-  author={Miao, Yuwei and Guo, Yujie and Ma, Hanqi and Yan, Jun and Jiang, Feiran and Liao, Ruibo and Huang, Jian},
+  author={Miao, Yuwei and Guo, Yuzhi and Ma, Hehuan and Yan, Jingquan and Jiang, Feng and Liao, Rui and Huang, Junzhou},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
   volume={39},
   number={1},
