@@ -59,7 +59,7 @@ pip install huggingface==0.0.1 scikit-learn obonet accelerate==1.0.1 datasets==3
 
 ### Evaluation
 
-1. Download [model checkpoints](URL_TO_BE_ADDED) and unzip them
+1. Download [model checkpoints](https://drive.google.com/file/d/1OiW862YE_0FKzinyPEaFi5w87W_vLaVg/view?usp=sharing) and unzip them
 2. Example evaluation results can be found at `ckpt/evaluation_result/test_results.log`
 3. Run evaluation:
    ```bash
