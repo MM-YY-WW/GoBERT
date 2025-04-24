@@ -11,10 +11,22 @@ The pre-trained model checkpoint for reproducing our paper results is available 
 
 ```python
 from transformers import AutoTokenizer, BertForPreTraining
+import torch
 
 repo_name = "MM-YY-WW/GoBERT"
-tokenizer = AutoTokenizer.from_pretrained(repo_name)
+tokenizer = AutoTokenizer.from_pretrained(repo_name, use_fast=False, trust_remote_code=True)
 model = BertForPreTraining.from_pretrained(repo_name)
+
+# Obtain function-level GoBERT Embedding:
+input_sequences = 'GO:0005739 GO:0005783 GO:0005829 GO:0006914 GO:0006915 GO:0006979 GO:0031966 GO:0051560'
+tokenized_input = tokenizer(input_sequences)
+input_tensor = torch.tensor(tokenized_input['input_ids']).unsqueeze(0)
+attention_mask = torch.tensor(tokenized_input['attention_mask']).unsqueeze(0)
+
+model.eval()
+with torch.no_grad():
+    outputs = model(input_ids=input_tensor, attention_mask=attention_mask, output_hidden_states=True)
+    embedding = outputs.hidden_states[-1].squeeze(0).cpu().numpy() 
 ```
 
 ## Web Interface
