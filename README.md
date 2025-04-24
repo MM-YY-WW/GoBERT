@@ -1,4 +1,4 @@
-# GoBERT
+# GoBERT: Gene Ontology Graph Informed BERT for Universal Gene Function Prediction.
 
 This repository is the official implementation of the paper "GoBERT: Gene Ontology Graph Informed BERT for Universal Gene Function Prediction."
 
